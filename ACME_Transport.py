@@ -79,5 +79,8 @@ for entry in powerSupplySensors:
     else:
         temp = [entry[0], entry[1]]
         powerSupplySensors_Filtered.append(temp)
+        
+    if(entry[1] < 0.996):
+        print("EARLY WARNING: Power Supply: "+str(entry[0]+" is below 0.996."))
 
         
